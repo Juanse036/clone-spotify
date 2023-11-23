@@ -45,7 +45,7 @@ const VolumeControl = () => {
         defaultValue={[100]}
         max={100}
         min={0}
-        className="w-[95px]"
+        className="w-[100px]"
         value={[volume * 100]}
         onValueChange={(value) => {
           const [newVolume] = value;
@@ -90,7 +90,7 @@ const SongControl = ({ audio }) => {
         defaultValue={[0]}
         max={audio.current?.duration ?? 0}
         min={0}
-        className="w-[400px]"
+        className="w-[410px]"
         value={[currentTime]}
         onValueChange={(value) => {
           audio.current.currentTime = value;

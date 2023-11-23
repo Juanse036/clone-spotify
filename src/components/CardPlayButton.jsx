@@ -28,14 +28,18 @@ export function CardPlayButton({ id, size = "small" }) {
     setIsPlaying(!isPlaying);
   };
 
-  const iconClassName = size === "small" ? "w-4 h-4" : "w-6 h-6";
+  const iconClassName = size === "small" ? "w-4 h-4" : "w-5 h-5";
 
   return (
     <button
       onClick={handleClick}
       className="card-play-button rounded-full bg-green-500 hover:scale-105 transition hover:bg-green400 p-4 "
     >
-      {isPlayingPlaylist ? <Pause className /> : <Play className />}
+      {isPlayingPlaylist ? (
+        <Pause className={iconClassName} />
+      ) : (
+        <Play className={iconClassName} />
+      )}
     </button>
   );
 }
